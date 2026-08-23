@@ -1,31 +1,31 @@
 # AWS EC2 JupyterLab Lab
 
-Cloud infrastructure laboratory focused on deploying a containerized data science environment on Amazon Web Services.
+Cloud infrastructure laboratory focused on deploying and documenting a containerized JupyterLab environment on Amazon Web Services.
 
-The project demonstrates the provisioning of an Ubuntu Server EC2 instance, secure remote administration through SSH, Docker-based application deployment, AWS Security Group configuration, and JupyterLab service exposure through TCP port 8888.
+The project demonstrates the use of Amazon EC2, Ubuntu Server, SSH remote administration, Docker containerization, AWS Security Groups, and JupyterLab service exposure through TCP port 8888.
 
 ## Architecture
+
+![AWS EC2 JupyterLab Architecture](architecture/aws-ec2-jupyterlab-architecture.png)
 
 The environment follows this logical flow:
 
 ```text
-Local Laptop
-PowerShell + SSH
-      |
-      | TCP 22
-      v
+Local Windows Workstation
+        |
+   PowerShell + SSH
+        |
+     TCP 22
+        |
 AWS Security Group
-      |
-      v
-AWS EC2
-Ubuntu Server
-      |
-      v
-Docker
-      |
-      v
-JupyterLab
-      |
-      | TCP 8888
-      v
-Internet / Web Client
+        |
+     AWS EC2
+   Ubuntu Server
+        |
+      Docker
+        |
+    JupyterLab
+        |
+     TCP 8888
+        |
+ Internet / Web Client
