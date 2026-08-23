@@ -6,16 +6,7 @@ The project demonstrates the use of Amazon EC2, Ubuntu Server, SSH remote admini
 
 ## Architecture
 
-The environment follows this logical flow:
-
-```mermaid
-flowchart TD
-    A["Local Laptop<br/>PowerShell + SSH"] -->|TCP 22| B["AWS Security Group"]
-    C["Internet / Web Client"] -->|TCP 8888| B
-    B --> D["AWS EC2 Instance<br/>Ubuntu Server"]
-    D --> E["Docker Engine"]
-    E --> F["JupyterLab Container"]
-```
+![AWS EC2 JupyterLab Architecture](architecture/aws-ec2-jupyterlab-architecture-pro.png)
 
 This architecture highlights two controlled access paths:
 
